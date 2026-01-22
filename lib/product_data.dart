@@ -1,7 +1,4 @@
-
-
 final List<Map<String, dynamic>> allProducts = [
-
   {
     'id': 'm1',
     'title': 'iPhone 15 Pro',
@@ -29,8 +26,6 @@ final List<Map<String, dynamic>> allProducts = [
     'category': 'mobiles',
     'description': 'Vivo V30 with AMOLED display and fast charging.'
   },
-
-
   {
     'id': 'f1',
     'title': 'Men\'s Cotton T-Shirt',
@@ -58,8 +53,6 @@ final List<Map<String, dynamic>> allProducts = [
     'category': 'fashion',
     'description': 'Breathable and lightweight running shoes.'
   },
-
-
   {
     'id': 's1',
     'title': 'MRF Cricket Bat',
@@ -78,8 +71,6 @@ final List<Map<String, dynamic>> allProducts = [
     'category': 'sports',
     'description': 'Original Adidas football with textured grip.'
   },
-
-
   {
     'id': 'e1',
     'title': 'MacBook Air M2',
@@ -98,8 +89,6 @@ final List<Map<String, dynamic>> allProducts = [
     'category': 'electronics',
     'description': 'Industry-leading noise cancellation headphones.'
   },
-
-
   {
     'id': 'b1',
     'title': 'Dove Shampoo',
@@ -121,19 +110,6 @@ final List<Map<String, dynamic>> allProducts = [
 ];
 
 
-List<Map<String, dynamic>> getProductsByCategory(String category) {
-  if (category == 'all') return List.from(allProducts);
-  return allProducts.where((p) => p['category'] == category).toList();
-}
-
-Map<String, dynamic>? getProductById(String id) {
-  try {
-    return allProducts.firstWhere((p) => p['id'] == id);
-  } catch (e) {
-    return null;
-  }
-}
-
 
 final List<Map<String, dynamic>> cartItems = [];
 
@@ -142,5 +118,24 @@ void removeFromCart(Map<String, dynamic> product) => cartItems.remove(product);
 void removeAtIndex(int index) => cartItems.removeAt(index);
 
 double cartTotal() {
-  return cartItems.fold(0, (sum, item) => sum + (item['price'] as num).toDouble());
+  return cartItems.fold(
+      0, (sum, item) => sum + (item['price'] as num).toDouble());
+}
+
+
+
+final List<Map<String, dynamic>> favouriteProducts = [];
+
+bool isFavourite(Map<String, dynamic> product) {
+  return favouriteProducts.any((p) => p['id'] == product['id']);
+}
+
+void addToFavourite(Map<String, dynamic> product) {
+  if (!isFavourite(product)) {
+    favouriteProducts.add(product);
+  }
+}
+
+void removeFromFavourite(Map<String, dynamic> product) {
+  favouriteProducts.removeWhere((p) => p['id'] == product['id']);
 }
