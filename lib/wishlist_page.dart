@@ -1,8 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'product_data.dart';
 
 class WishlistPage extends StatefulWidget {
-   WishlistPage({super.key, required List favorites});
+  WishlistPage({super.key, required List favorites});
 
   @override
   State<WishlistPage> createState() => _WishlistPageState();

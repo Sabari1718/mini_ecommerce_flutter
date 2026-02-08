@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'product.dart';
 import 'product_detail.dart';
@@ -5,7 +6,7 @@ import 'product_detail.dart';
 class CategoriesPage extends StatefulWidget {
   final List<Product> products;
 
-    CategoriesPage({super.key, required this.products});
+  CategoriesPage({super.key, required this.products});
 
   @override
   State<CategoriesPage> createState() => _CategoriesPageState();
@@ -34,7 +35,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
 
       body: Column(
         children: [
-            SizedBox(height: 10),
+          SizedBox(height: 10),
 
 
           SizedBox(
@@ -79,7 +80,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
             ),
           ),
 
-            SizedBox(height: 10),
+          SizedBox(height: 10),
 
 
           Expanded(

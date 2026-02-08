@@ -1,9 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'orders_provider.dart';
 
 class MyOrdersPage extends StatelessWidget {
-   MyOrdersPage({super.key});
+  MyOrdersPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,7 @@ class MyOrdersPage extends StatelessWidget {
             ),
             child: ListTile(
               contentPadding:
-               EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              EdgeInsets.symmetric(horizontal: 12, vertical: 10),
 
               leading: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
@@ -75,7 +76,7 @@ class MyOrdersPage extends StatelessWidget {
                   ordersProvider.cancelOrder(p);
 
                   ScaffoldMessenger.of(context).showSnackBar(
-                     SnackBar(
+                    SnackBar(
                       content: Text("Order cancelled"),
                       duration: Duration(milliseconds: 800),
                     ),

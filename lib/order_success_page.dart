@@ -4,7 +4,7 @@ import 'my_orders_page.dart';
 class OrderSuccessPage extends StatelessWidget {
   final String title;
 
-   OrderSuccessPage({super.key, required this.title});
+  OrderSuccessPage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,9 @@ class OrderSuccessPage extends StatelessWidget {
             children: [
               Icon(Icons.check_circle_rounded,
                   size: 90, color: Colors.green),
-               SizedBox(height: 20),
+              SizedBox(height: 20),
 
-               Text(
+              Text(
                 "Order Placed Successfully!",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),

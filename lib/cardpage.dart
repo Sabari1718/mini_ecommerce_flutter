@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'cart_provider.dart';
@@ -38,7 +39,7 @@ class CartPage extends StatelessWidget {
                 SizedBox(height: 8),
                 ElevatedButton(
                   onPressed: () {
-                   
+
                     showDialog(
                         context: context,
                         builder: (_) => AlertDialog(

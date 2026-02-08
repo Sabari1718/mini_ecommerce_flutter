@@ -1,4 +1,4 @@
-// lib/product_detail.dart
+
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:provider/provider.dart';
@@ -302,9 +302,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 "${product!.rating}",
                                 style:  TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
                               ),
-                               SizedBox(width: 4),
-                               Icon(Icons.star, color: Colors.green, size: 16),
-                               SizedBox(width: 6),
+                              SizedBox(width: 4),
+                              Icon(Icons.star, color: Colors.green, size: 16),
+                              SizedBox(width: 6),
                               Text(
 
                                 "${(product!.images.length * 10)}+ ratings",
@@ -339,7 +339,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                           "₹${product!.price}",
                           style:TextStyle(color: Colors.green, fontSize: 26, fontWeight: FontWeight.bold),
                         ),
-                         SizedBox(width: 12),
+                        SizedBox(width: 12),
                         Container(
                           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                           decoration: BoxDecoration(color: Colors.orange.shade100, borderRadius: BorderRadius.circular(6)),
@@ -356,7 +356,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     padding:  EdgeInsets.symmetric(horizontal: 16),
                     child:  Text("Highlights", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
                   ),
-                   SizedBox(height: 8),
+                  SizedBox(height: 8),
                   Padding(
                     padding:  EdgeInsets.symmetric(horizontal: 16),
                     child: buildHighlights(product!),
@@ -368,7 +368,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     padding:  EdgeInsets.symmetric(horizontal: 16),
                     child:  Text("Available Colors", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
                   ),
-                   SizedBox(height: 8),
+                  SizedBox(height: 8),
                   SizedBox(
                     height: 90,
                     child: ListView.builder(
@@ -400,14 +400,14 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     padding:  EdgeInsets.symmetric(horizontal: 16),
                     child:  Text("Ratings & Reviews", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
                   ),
-                   SizedBox(height: 8),
+                  SizedBox(height: 8),
                   Padding(
                     padding:  EdgeInsets.symmetric(horizontal: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("★ ${product!.rating} (approx)"),
-                         SizedBox(height: 8),
+                        SizedBox(height: 8),
                         Row(
                           children: [
                             Icon(Icons.circle, size: 8),
@@ -448,7 +448,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     child: buildSpecifications(product!),
                   ),
 
-                   SizedBox(height: 20),
+                  SizedBox(height: 20),
 
 
                   Padding(
@@ -478,7 +478,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                             ),
                           ),
                         ),
-                         SizedBox(width: 10),
+                        SizedBox(width: 10),
                         ElevatedButton(
                           onPressed: checkPincode,
                           style: ElevatedButton.styleFrom(
@@ -496,16 +496,16 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                       child: Text(pincodeResult!, style:  TextStyle(color: Colors.green)),
                     ),
 
-                 SizedBox(height: 12),
+                  SizedBox(height: 12),
 
 
                   Padding(
                     padding:  EdgeInsets.symmetric(horizontal: 16),
                     child:  Text("Similar Products", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
                   ),
-                   SizedBox(height: 12),
+                  SizedBox(height: 12),
                   buildSimilarCarousel(),
-                   SizedBox(height: 30),
+                  SizedBox(height: 30),
                 ],
               ),
             ),
@@ -525,7 +525,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     onTap: () {
                       cart.add(product!);
                       ScaffoldMessenger.of(context).showSnackBar(
-                         SnackBar(content: Text("Added to cart"), duration: Duration(milliseconds: 800)),
+                        SnackBar(content: Text("Added to cart"), duration: Duration(milliseconds: 800)),
                       );
                     },
                     child: Container(
@@ -537,7 +537,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     ),
                   ),
                 ),
-                 SizedBox(width: 12),
+                SizedBox(width: 12),
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
@@ -572,4 +572,3 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
     );
   }
 }
-
